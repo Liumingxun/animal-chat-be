@@ -1,12 +1,13 @@
 import express from 'express'
-import type { Express, Request, Response, Application} from 'express'
-const app: Application = express();
+import cors from 'cors'
+import type { Application } from 'express'
+const app: Application = express()
 
-app.get('/', (req: Request, res: Response, next) => {
-  res.send('test')
-})
+app.use(cors({
+  origin: /bing.com$/,
+}))
 
 if (import.meta.env.PROD)
-  app.listen(3030);
+  app.listen(3000)
 
-export const viteNodeApp = app;
+export const viteNodeApp = app

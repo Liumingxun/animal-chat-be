@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import { VitePluginNode } from 'vite-plugin-node';
+import { defineConfig } from 'vite'
+import { VitePluginNode } from 'vite-plugin-node'
 
 export default defineConfig({
   // ...vite configures
@@ -43,8 +43,8 @@ export default defineConfig({
       // }
       // }
       // swc configs, see [swc doc](https://swc.rs/docs/configuration/swcrc)
-      swcOptions: {}
-    })
+      swcOptions: {},
+    }),
   ],
   optimizeDeps: {
     // Vite does not work well with optionnal dependencies,
@@ -59,4 +59,4 @@ export default defineConfig({
     //   'fastify-swagger',
     // ],
   },
-});
+})
